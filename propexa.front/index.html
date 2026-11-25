@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propexa – Property Relationship Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOGIN PAGE ============ -->
+<section id="login">
+  <div class="hero">
+    <div class="logo">Prop<span>exa</span></div>
+    <div>
+      <h1>Every buyer, every follow-up, one place.</h1>
+      <p style="margin-top:16px">Track customers, properties, leads and follow-ups without losing a single conversation.</p>
+    </div>
+    <small style="opacity:.6">Propexa · Smart Property Relationship Management</small>
+  </div>
+  <div class="formwrap">
+    <div class="box">
+      <h2>Sign in</h2>
+      <p class="sub">Use your agent account to open the dashboard.</p>
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="admin@propexa.com">
+      <label for="pass">Password</label>
+      <input id="pass" type="password" placeholder="Your password">
+      <div class="err" id="loginErr" role="alert"></div>
+      <button class="btn full" id="loginBtn">Sign in</button>
+      <p class="hint">Demo login: admin@propexa.com / admin123</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD ============ -->
+<div id="app" class="hidden">
+  <aside>
+    <div class="logo">Prop<span>exa</span></div>
+    <button class="nav active" data-view="overview">Overview</button>
+    <button class="nav" data-view="customers">Customers</button>
+    <button class="nav" data-view="properties">Properties</button>
+    <button class="nav" data-view="leads">Leads</button>
+    <button class="nav" data-view="followups">Follow-ups</button>
+    <div class="spacer"></div>
+    <button class="nav" id="logout">Sign out</button>
+  </aside>
+  <main>
+    <div class="top"><h2 id="title">Overview</h2><button class="btn hidden" id="addBtn">Add new</button></div>
+    <div id="view"></div>
+  </main>
+</div>
+
+<div id="modalRoot"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
